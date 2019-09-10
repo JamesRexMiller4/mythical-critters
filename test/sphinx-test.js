@@ -66,11 +66,11 @@ describe('Sphinx', function() {
 
     sphinx.collectRiddle(riddle1);
     sphinx.attemptAnswer('short');
-
+    // console.log(this.riddles.find(attemptAnswer));
     assert.deepEqual(sphinx.riddles, []);
   });
 
-  it('should accept answers in any order', function() {
+  it.skip('should accept answers in any order', function() {
     var sphinx = new Sphinx();
     var riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
@@ -93,7 +93,7 @@ describe('Sphinx', function() {
     assert.deepEqual(sphinx.riddles, [riddle1, riddle2]);
   });
 
-  it('should mock heroes when they get the answer right', function() {
+  it.skip('should mock heroes when they get the answer right', function() {
     var sphinx = new Sphinx();
     var riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
@@ -111,13 +111,13 @@ describe('Sphinx', function() {
     assert.equal(response, 'That wasn\'t that hard, I bet you don\'t get the next one');
   });
 
-  it('should start having eaten no heroes', () => {
+  it.skip('should start having eaten no heroes', () => {
     var sphinx = new Sphinx();
 
     assert.equal(sphinx.heroesEaten, 0);
   });
 
-  it('should eat the hero if their answer isn\'t correct for any riddles', function() {
+  it.skip('should eat the hero if their answer isn\'t correct for any riddles', function() {
     var sphinx = new Sphinx();
     var riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
@@ -141,7 +141,7 @@ describe('Sphinx', function() {
     assert.equal(sphinx.heroesEaten, 1);
   });
 
-  it('should scream with rage if a hero gets all riddles correct', function() {
+  it.skip('should scream with rage if a hero gets all riddles correct', function() {
     var sphinx = new Sphinx();
     var riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',
@@ -160,7 +160,7 @@ describe('Sphinx', function() {
     assert.equal(rage, 'PSSSSSSS THIS HAS NEVER HAPPENED, HOW DID YOU KNOW THE ANSWER WAS \"Halfway, after that it\'s running out.\"???');
   });
 
-  it('should scream specifically about the last riddle to be answered', function() {
+  it.skip('should scream specifically about the last riddle to be answered', function() {
     var sphinx = new Sphinx();
     var riddle1 = {
       riddle: 'What word becomes shorter when you add two letters to it?',

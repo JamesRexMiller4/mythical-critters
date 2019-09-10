@@ -23,7 +23,7 @@ class Hobbit {
 
   timeTravel(num, hobbit) {
     for (var i = 0; i < num; i++) {
-      hobbit.celebrateBirthday() * num;
+      hobbit.celebrateBirthday()
     }
   }
 }
